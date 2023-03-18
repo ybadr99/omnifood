@@ -36,7 +36,7 @@ Default 1
 
 * {
   margin: 0;
-  pad: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -67,12 +67,16 @@ body {
   /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
 }
 
-.gird--cols-2 {
+.grid--center-v {
+  align-items: center;
+}
+
+.grid--cols-2 {
   grid-template-columns: repeat(2, 1fr);
   /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
 }
 
-.gird--cols-3 {
+.grid--cols-3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -237,6 +241,32 @@ body {
 }
 
 /*************************/
+/*FEATURED IN SECTION */
+/*************************/
+
+.feature-in {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.feature-in .feature-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+  color: #888;
+}
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/*************************/
 /* HOW IT WORKS SECTION */
 /*************************/
 
@@ -244,8 +274,74 @@ body {
   padding: 9.6rem 0;
 }
 
-.section-how .container div {
-  padding: 50px;
-  font-size: 40px;
-  background-color: #333;
+.section-how .subheading {
+  display: block;
+  color: #cf711f;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.section-how .secondary-heading {
+  color: #333;
+  font-size: 4.4rem;
+  font-weight: 700;
+  margin-bottom: 9.6rem;
+}
+
+.step-text-box .step-number {
+  font-size: 8.6rem;
+  color: #ddd;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.step-text-box .heading-tertiary {
+  font-size: 3rem;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.step-text-box .step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.step-img-box::before {
+  width: 60%;
+  /* height: 60%; */
+  /* 60% of parents width  */
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+}
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+}
+
+.step-img {
+  width: 35%;
 }
